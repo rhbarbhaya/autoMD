@@ -26,11 +26,11 @@ from typing import Union
 
 
 def add(
-    a: Union[int, float], 
-    b: Union[int, float]
+    first: Union[int, float],
+    second: Union[int, float]
 ) -> float:
     """Compute and return the addition of two numbers.
-    
+
     Examples:
         >>> add(4.0, 2.0)
         6.0
@@ -40,20 +40,20 @@ def add(
         6.0
 
     Args:
-        a: A number representing the first addend in the addition.
-        b: A number representing the second addend in the addition.
+        first: A number representing the first addend in the addition.
+        second: A number representing the second addend in the addition.
 
     Returns:
-        A number representing the arithmetic sum of `a` and `b`.
+        A number representing the arithmetic sum of `first` and `second`.
     """
-    return float(a + b)
+    return float(first + second)
 
 def subtract(
-    a: Union[int, float], 
-    b: Union[int, float]
+    first: Union[int, float],
+    second: Union[int, float]
 ) -> float:
     """Comuptes and return the difference of two numbers.
-    
+
     Examples:
         >>> subtract(7.0, 3.0)
         4.0
@@ -63,20 +63,20 @@ def subtract(
         4.0
 
     Args:
-        a: A number representing the quantity that exists.
-        b: A number representing the quantity to reduce the existing quantity by.
+        first: A number representing the quantity that exists.
+        second: A number representing the quantity to reduce the existing quantity by.
 
     Returns:
-        A number representing the arithmetic difference of `a` from `b`.
+        A number representing the arithmetic difference of `first` from `second`.
     """
-    return float(a - b)
+    return float(first - second)
 
 def multiply(
-    a: Union[int, float],
-    b: Union[int, float]
+    first: Union[int, float],
+    second: Union[int, float]
 ) -> float:
     """Compute and return the multiplication of two numbers.
-    
+
     Examples:
         >>> multiply(5.0, 3.0)
         15.0
@@ -86,20 +86,20 @@ def multiply(
         15.0
 
     Args:
-        a: A number representing the first number to multiply.
-        b: A number representing the number to multiple the first number by.
+        first: A number representing the first number to multiply.
+        second: A number representing the number to multiple the first number by.
 
     Returns:
-        A number representing the arithmetic multiplying `a` with `b`.
+        A number representing the arithmetic multiplying `first` with `second`.
     """
-    return float(a * b)
+    return float(first * second)
 
 def divide(
-    a: Union[int, float],
-    b: Union[int, float]
+    first: Union[int, float],
+    second: Union[int, float]
 ) -> float:
     """Compute and return the division of two numbers.
-    
+
     Examples:
         >>> divide(6.0, 2.0)
         3.0
@@ -109,8 +109,8 @@ def divide(
         3.0
 
     Args:
-        a (): A number representing the divident.
-        b (): A number representing the divisor.
+        first: A number representing the divident.
+        second: A number representing the divisor.
 
     Raises:
         ZeroDivisionError: division by zero
@@ -118,6 +118,6 @@ def divide(
     Returns:
         A number representing the arithmetic division.
     """
-    if b==0:
+    if second==0:
         raise ZeroDivisionError("Invalid division command")
-    return float(a / b)
+    return float(first / second)
